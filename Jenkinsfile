@@ -8,5 +8,11 @@ pipeline {
       }
     }
 
+    stage('Deploy') {
+      steps {
+        sh 'Docker run -d nginx_custom'
+      }
+    }
+
   }
 }
