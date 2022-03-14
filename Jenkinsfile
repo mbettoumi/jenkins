@@ -10,7 +10,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sh 'Docker run -d nginx_custom'
+        sh 'docker run -d nginx_custom'
       }
     }
 
