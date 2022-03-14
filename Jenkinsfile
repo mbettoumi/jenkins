@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t nginx_custom -f Dockerfile'
+        sh 'docker build -t nginx_custom .'
         echo 'Build completed'
       }
     }
