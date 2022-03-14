@@ -16,7 +16,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'docker exec mycontainer curl 127.0.0.1'
+        sh 'docker exec mycontainer curl 127.0.0.3'
       }
     }
 
