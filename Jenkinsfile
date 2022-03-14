@@ -8,9 +8,21 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('Run') {
       steps {
-        sh 'docker run -d nginx_custom'
+        sh 'docker run -d --name mycontainer nginx_custom'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        sh 'docker exec mycontainer curl 127.0.0.1'
+      }
+    }
+
+    stage('Finish') {
+      steps {
+        echo 'Deploy completed'
       }
     }
 
