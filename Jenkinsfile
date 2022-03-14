@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo "[Jenkins] Hello mbe !" > /usr/share/nginx/html/index.html'
+        sh 'sudo echo "[Jenkins] Hello mbe !" > /usr/share/nginx/html/index.html'
       }
     }
 
