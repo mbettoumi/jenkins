@@ -2,6 +2,12 @@ pipeline {
   agent any
   stages {
     stage('Build') {
+      agent {
+        dockerfile {
+          filename 'Dockerfile'
+        }
+
+      }
       steps {
         sh 'docker build -t nginx_custom'
         echo 'Build completed'
