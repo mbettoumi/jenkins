@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo echo "[Jenkins] Hello mbe !" > /usr/share/nginx/html/index.html'
+        sh 'curl 127.0.0.1'
       }
     }
 
