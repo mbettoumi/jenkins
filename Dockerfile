@@ -1,2 +1,2 @@
 FROM nginx
-RUN echo "[Jenkins] Hello Mr Mahdi Bettoumi !" > /usr/share/nginx/html/index.html
+RUN echo "Hello Mr Mahdi Bettoumi, build with Jenkins !" > /usr/share/nginx/html/index.html
